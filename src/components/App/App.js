@@ -24,7 +24,7 @@ export class App extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('load', Spotify.search(''));
+    window.addEventListener('load', () => {Spotify.getAccessToken()});
   }
 
   search(term) {
